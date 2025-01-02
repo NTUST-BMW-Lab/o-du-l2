@@ -3,6 +3,9 @@ name: Sync Fork with All Upstream Branches
 on:
   schedule:
     - cron: '0 0 * * 1'  # Runs every Monday at midnight UTC
+  push:
+    branches:
+      - 'sync-action'  # Trigger the workflow when pushing to 'sync-action' branch
   workflow_dispatch:  # Allows manual trigger
 
 jobs:
